@@ -1,6 +1,10 @@
 package invoicer.invoicer.appuser;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -27,13 +31,26 @@ public class AppUser implements UserDetails {
             generator = "user_sequence"
     )
     private Long id;
+    @Email
+    @NotBlank
     private String email;
+    @NotNull
     private String password;
+    @NotNull
+    @Size(min = 2, message = "First name should have at least 2 characters")
     private String firstName;
+    @NotNull
+    @Size(min = 2, message = "Last name should have at least 2 characters")
     private String lastName;
+    @NotNull
+    @Size(min = 2, message = "City should have at least 2 characters")
     private String city;
+    @NotNull
+    @Size(min = 2, message = "Street should have at least 2 characters")
     private String street;
+    @NotNull
     private String postalCode;
+    @NotNull
     private String phoneNumber;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
