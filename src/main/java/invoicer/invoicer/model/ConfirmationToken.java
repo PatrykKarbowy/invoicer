@@ -1,6 +1,5 @@
-package invoicer.invoicer.registration.token;
+package invoicer.invoicer.model;
 
-import invoicer.invoicer.appuser.AppUser;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package invoicer.invoicer.registration;
+package invoicer.invoicer.request;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

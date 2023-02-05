@@ -1,5 +1,6 @@
-package invoicer.invoicer.appuser;
+package invoicer.invoicer.model;
 
+import invoicer.invoicer.model.role.AppUserRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

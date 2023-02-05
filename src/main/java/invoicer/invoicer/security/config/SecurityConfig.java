@@ -1,8 +1,9 @@
 package invoicer.invoicer.security.config;
 
-import invoicer.invoicer.appuser.AppUserRepository;
+import invoicer.invoicer.repository.AppUserRepository;
 import invoicer.invoicer.security.PasswordEncoder;
 
+import invoicer.invoicer.security.jwttoken.JwtAuthFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

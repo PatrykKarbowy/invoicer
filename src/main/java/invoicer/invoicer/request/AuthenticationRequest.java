@@ -1,4 +1,4 @@
-package invoicer.invoicer.auth;
+package invoicer.invoicer.request;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

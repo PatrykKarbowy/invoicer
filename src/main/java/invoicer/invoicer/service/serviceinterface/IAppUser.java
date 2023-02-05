@@ -1,6 +1,7 @@
-package invoicer.invoicer.appuser;
+package invoicer.invoicer.service.serviceinterface;
 
-import invoicer.invoicer.registration.token.ConfirmationTokenResponse;
+import invoicer.invoicer.model.AppUser;
+import invoicer.invoicer.response.ConfirmationTokenResponse;
 
 import java.util.List;
 import java.util.Optional;

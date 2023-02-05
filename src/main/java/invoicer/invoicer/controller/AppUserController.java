@@ -1,7 +1,9 @@
-package invoicer.invoicer.appuser;
+package invoicer.invoicer.controller;
 
 import invoicer.invoicer.exception.AppUserNotFoundException;
-import invoicer.invoicer.registration.RegistrationRequest;
+import invoicer.invoicer.model.AppUser;
+import invoicer.invoicer.request.RegistrationRequest;
+import invoicer.invoicer.service.AppUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

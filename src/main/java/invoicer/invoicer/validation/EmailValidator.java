@@ -1,4 +1,4 @@
-package invoicer.invoicer.registration;
+package invoicer.invoicer.validation;
 
 import org.springframework.stereotype.Service;
 

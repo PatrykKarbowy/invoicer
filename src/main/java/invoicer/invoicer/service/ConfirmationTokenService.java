@@ -1,5 +1,7 @@
-package invoicer.invoicer.registration.token;
+package invoicer.invoicer.service;
 
+import invoicer.invoicer.model.ConfirmationToken;
+import invoicer.invoicer.repository.ConfirmationTokenRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

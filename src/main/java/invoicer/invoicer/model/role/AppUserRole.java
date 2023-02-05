@@ -1,4 +1,4 @@
-package invoicer.invoicer.appuser;
+package invoicer.invoicer.model.role;
 
 public enum AppUserRole {
     CLIENT,

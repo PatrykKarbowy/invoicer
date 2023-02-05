@@ -1,8 +1,10 @@
-package invoicer.invoicer.appuser;
+package invoicer.invoicer.service;
 
-import invoicer.invoicer.registration.token.ConfirmationToken;
-import invoicer.invoicer.registration.token.ConfirmationTokenResponse;
-import invoicer.invoicer.registration.token.ConfirmationTokenService;
+import invoicer.invoicer.model.AppUser;
+import invoicer.invoicer.repository.AppUserRepository;
+import invoicer.invoicer.service.serviceinterface.IAppUser;
+import invoicer.invoicer.model.ConfirmationToken;
+import invoicer.invoicer.response.ConfirmationTokenResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

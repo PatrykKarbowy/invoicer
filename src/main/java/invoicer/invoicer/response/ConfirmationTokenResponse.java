@@ -1,4 +1,4 @@
-package invoicer.invoicer.registration.token;
+package invoicer.invoicer.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

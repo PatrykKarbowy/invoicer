@@ -1,7 +1,8 @@
-package invoicer.invoicer.security.config;
+package invoicer.invoicer.security.jwttoken;
 
-import invoicer.invoicer.appuser.AppUser;
-import invoicer.invoicer.appuser.AppUserService;
+import invoicer.invoicer.model.AppUser;
+import invoicer.invoicer.service.AppUserService;
+import invoicer.invoicer.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -33,6 +34,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         final String authHeader = request.getHeader("Authorization");
         final String userEmail;
         final String jwtToken;
+        final String jwtRefreshToken;
 
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             filterChain.doFilter(request, response);
@@ -56,6 +58,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             );
             SecurityContextHolder.getContext().setAuthentication(authToken);
             }
+
         }
         filterChain.doFilter(request, response);
     }

@@ -1,12 +1,12 @@
-package invoicer.invoicer.registration;
+package invoicer.invoicer.controller;
 
-import invoicer.invoicer.registration.token.ConfirmationTokenResponse;
+import invoicer.invoicer.request.RegistrationRequest;
+import invoicer.invoicer.response.ConfirmationTokenResponse;
+import invoicer.invoicer.service.RegistrationService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping(path = "api/v1/registration")

@@ -1,14 +1,13 @@
-package invoicer.invoicer.registration;
+package invoicer.invoicer.service;
 
-import invoicer.invoicer.appuser.AppUser;
+import invoicer.invoicer.model.AppUser;
 import invoicer.invoicer.exception.AppUserNotFoundException;
-import invoicer.invoicer.appuser.AppUserRole;
-import invoicer.invoicer.appuser.AppUserService;
-import invoicer.invoicer.registration.token.ConfirmationToken;
-import invoicer.invoicer.registration.token.ConfirmationTokenResponse;
-import invoicer.invoicer.registration.token.ConfirmationTokenService;
+import invoicer.invoicer.model.role.AppUserRole;
+import invoicer.invoicer.validation.EmailValidator;
+import invoicer.invoicer.request.RegistrationRequest;
+import invoicer.invoicer.model.ConfirmationToken;
+import invoicer.invoicer.response.ConfirmationTokenResponse;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -48,7 +47,7 @@ public class RegistrationService {
         appUserService.enableAppUser(confirmationToken.getAppUser().getEmail());
         return ConfirmationTokenResponse
                 .builder()
-                .token(String.valueOf(confirmationToken))
+                .token("Confirmed")
                 .build();
     }
 }
