@@ -16,19 +16,19 @@ public class AppUserController {
     private final AppUserService appUserService;
 
 
-    @GetMapping(path = "all")
+    @GetMapping("all")
     public List<AppUser> getAllUsers(){
         return appUserService.getUsers();
     }
 
-    @GetMapping(path = "{id}")
+    @GetMapping("{id}")
     public AppUser getUserById(@PathVariable("id") Long id){
         AppUser appUser = appUserService.findById(id)
                 .orElseThrow(()->new AppUserNotFoundException("Student with "+id+" is Not Found!"));
         return appUser;
     }
 
-    @PutMapping(path = "{id}")
+    @PutMapping("{id}")
     public AppUser updateUserInformation(@PathVariable("id") Long id, @RequestBody RegistrationRequest request){
         AppUser appUser = appUserService.findById(id)
                 .orElseThrow(()->new AppUserNotFoundException("Student with "+id+" is Not Found!"));
@@ -45,7 +45,7 @@ public class AppUserController {
         return appUserService.save(appUser);
     }
 
-    @DeleteMapping(path = "{id}")
+    @DeleteMapping("{id}")
     public String deleteUserById(@PathVariable("id") Long id){
         AppUser appUser = appUserService.findById(id)
                 .orElseThrow(()->new AppUserNotFoundException("Student with "+id+" is Not Found!"));

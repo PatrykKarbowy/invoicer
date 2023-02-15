@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping(path = "api/v1/registration")
+@RequestMapping("api/v1/registration")
 @AllArgsConstructor
 public class RegistrationController {
 
     private final RegistrationService registrationService;
 
-    @PostMapping(path = "register")
+    @PostMapping("register")
     public ConfirmationTokenResponse register(@Valid @RequestBody RegistrationRequest request){
         return registrationService.register(request);
     }
 
-    @GetMapping(path = "confirm")
+    @GetMapping("confirm")
     public ConfirmationTokenResponse confirm(@RequestParam("token") String token){
         return registrationService.confirmToken(token);
     }

@@ -8,6 +8,10 @@ spring:
     password: Andrzej
     url: jdbc:postgresql://localhost:5432/invoicer
     username: postgres
+  servlet:
+    multipart:
+      max-file-size: 6MB
+      max-request-size: 6MB
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -16,6 +20,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+
+ocr:
+  data-path: /resources/static/pol.traindeddata
 
   mail:
     host: localhost
